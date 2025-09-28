@@ -22,9 +22,24 @@
   <main>
     <div class="container">
       <section class="card">
-        <h2 style="text-align: center;"><i class="fas fa-chart-line"></i> Interactive Visualizations</h2>
-        <p style="text-align: center; margin-bottom: 3rem;">Explore various data visualizations created using Python and JavaScript</p>
+        <h2 style="text-align: center;"><i class="fas fa-chart-line"></i> Data Science Projects & Visualizations</h2>
+        <p style="text-align: center; margin-bottom: 3rem;">Explore various data visualizations and analysis projects using Python and statistical methods</p>
         
+        <!-- Maharashtra Voter Analysis Section -->
+        <div class="card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; margin-bottom: 3rem;">
+          <h3 style="color: white;"><i class="fas fa-vote-yea"></i> Maharashtra Voter Registration Analysis</h3>
+          <p>Comprehensive analysis of voter registration data from data.gov.in, focusing on gender distribution patterns and district-wise variations across Maharashtra.</p>
+          <div style="margin: 2rem 0;">
+            <a href="https://github.com/ayushpushp/maharashtra-voter-analysis" class="btn" style="margin: 0.5rem; background: rgba(255,255,255,0.2); backdrop-filter: blur(10px);">
+              <i class="fab fa-github"></i> View Repository
+            </a>
+            <a href="https://colab.research.google.com/github/ayushpushp/maharashtra-voter-analysis/blob/main/data_analysis.ipynb" class="btn" style="margin: 0.5rem; background: rgba(255,255,255,0.2); backdrop-filter: blur(10px);">
+              <i class="fab fa-google"></i> Open in Colab
+            </a>
+          </div>
+        </div>
+
+        <!-- Existing Visualization Gallery -->
         <div style="text-align: center; margin-bottom: 2rem;">
           <button class="btn" onclick="generateNewPlots()">
             <i class="fas fa-sync-alt"></i> <span id="generate-btn-text">Generate New Plots</span>
@@ -32,19 +47,45 @@
         </div>
 
         <div class="viz-gallery">
+          <!-- Voter Analysis Plots -->
           <div class="viz-item">
-            <img src="plots/plot1.png" alt="Sine Wave Visualization" onclick="openImageModal(this)">
+            <img src="plots/scatter_plot.png" alt="Gender Ratio Scatter Plot" onclick="openImageModal(this)">
             <div class="viz-caption">
-              <h3>Sine Wave Function</h3>
-              <p>Mathematical visualization of sine wave patterns</p>
+              <h3>Gender Ratio Analysis</h3>
+              <p>District-wise gender ratio vs registration volume scatter plot</p>
             </div>
           </div>
 
           <div class="viz-item">
-            <img src="plots/plot2.png" alt="Random Scatter Plot" onclick="openImageModal(this)">
+            <img src="plots/box_plot.png" alt="Division Distribution Box Plot" onclick="openImageModal(this)">
             <div class="viz-caption">
-              <h3>Random Scatter Plot</h3>
-              <p>Statistical distribution of random data points</p>
+              <h3>Distribution Analysis</h3>
+              <p>Box plots showing registration patterns across divisions</p>
+            </div>
+          </div>
+
+          <div class="viz-item">
+            <img src="plots/bar_plot.png" alt="Top Districts Bar Plot" onclick="openImageModal(this)">
+            <div class="viz-caption">
+              <h3>District Rankings</h3>
+              <p>Top districts by registration volume and comparative analysis</p>
+            </div>
+          </div>
+
+          <!-- Original Demo Plots -->
+          <div class="viz-item">
+            <img src="plots/plot1.png" alt="Sine Wave Visualization" onclick="openImageModal(this)">
+            <div class="viz-caption">
+              <h3>Mathematical Functions</h3>
+              <p>Harmonic wave function visualization</p>
+            </div>
+          </div>
+
+          <div class="viz-item">
+            <img src="plots/plot2.png" alt="Statistical Analysis" onclick="openImageModal(this)">
+            <div class="viz-caption">
+              <h3>Statistical Analysis</h3>
+              <p>Correlation and distribution analysis</p>
             </div>
           </div>
         </div>
