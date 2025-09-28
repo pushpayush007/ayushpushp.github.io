@@ -2,23 +2,74 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Visualizations | Ayush Kumar Pushp</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Data Science Visualizations</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="visualizations.html">Visualizations</a>
-    </nav>
+  <header id="header">
+    <div class="container">
+      <h1>Data Science Visualizations</h1>
+      <nav>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="projects.html"><i class="fas fa-project-diagram"></i> Projects</a>
+        <a href="visualizations.html" class="active"><i class="fas fa-chart-bar"></i> Visualizations</a>
+      </nav>
+    </div>
   </header>
 
-  <section>
-    <p>Below are a few visualizations created using Matplotlib.</p>
-    <img src="plots/plot1.png" alt="Plot 1" width="500">
-    <img src="plots/plot2.png" alt="Plot 2" width="500">
-  </section>
+  <main>
+    <div class="container">
+      <section class="card">
+        <h2 style="text-align: center;"><i class="fas fa-chart-line"></i> Interactive Visualizations</h2>
+        <p style="text-align: center; margin-bottom: 3rem;">Explore various data visualizations created using Python and JavaScript</p>
+        
+        <div style="text-align: center; margin-bottom: 2rem;">
+          <button class="btn" onclick="generateNewPlots()">
+            <i class="fas fa-sync-alt"></i> <span id="generate-btn-text">Generate New Plots</span>
+          </button>
+        </div>
+
+        <div class="viz-gallery">
+          <div class="viz-item">
+            <img src="plots/plot1.png" alt="Sine Wave Visualization" onclick="openImageModal(this)">
+            <div class="viz-caption">
+              <h3>Sine Wave Function</h3>
+              <p>Mathematical visualization of sine wave patterns</p>
+            </div>
+          </div>
+
+          <div class="viz-item">
+            <img src="plots/plot2.png" alt="Random Scatter Plot" onclick="openImageModal(this)">
+            <div class="viz-caption">
+              <h3>Random Scatter Plot</h3>
+              <p>Statistical distribution of random data points</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Image Modal -->
+  <div id="image-modal" class="modal">
+    <div class="modal-content" style="max-width: 90%; text-align: center;">
+      <span class="close">&times;</span>
+      <img id="modal-image" style="max-width: 100%; height: auto; border-radius: 10px;">
+      <h3 id="modal-title" style="margin-top: 1rem;"></h3>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>
+        <i class="fas fa-envelope"></i> <a href="mailto:ayushpushp@iisc.ac.in">ayushpushp@iisc.ac.in</a> | 
+        <i class="fas fa-phone"></i> 9509771401
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -2,27 +2,94 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects | Ayush Kumar Pushp</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>My Projects</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="visualizations.html">Visualizations</a>
-    </nav>
+  <header id="header">
+    <div class="container">
+      <h1>My Projects</h1>
+      <nav>
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="projects.html" class="active"><i class="fas fa-project-diagram"></i> Projects</a>
+        <a href="visualizations.html"><i class="fas fa-chart-bar"></i> Visualizations</a>
+      </nav>
+    </div>
   </header>
 
-  <section>
-    <ul>
-      <li><strong>Retrieval-Augmented Generation (Nokia Internship):</strong> Built a RAG pipeline using LangChain + Elasticsearch.</li>
-      <li><strong>Image Classification and Segmentation:</strong> CNNs + DeepLabV3 with ResNet50 for healthy/unhealthy leaf detection.</li>
-      <li><strong>Seq2Seq Transliteration:</strong> Hindi→English name transliteration using attention-based RNNs.</li>
-      <li><strong>PageRank Implementation:</strong> Implemented PageRank via power iteration method.</li>
-      <li><strong>K-Means & GMM Clustering:</strong> Applied on MNIST dataset for unsupervised classification.</li>
-    </ul>
-  </section>
+  <main>
+    <div class="container">
+      <section>
+        <h2 style="text-align: center; margin-bottom: 3rem;">Featured Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card" onclick="showProjectDetails('rag')">
+            <h3><i class="fas fa-robot"></i> Retrieval-Augmented Generation</h3>
+            <p>Built a RAG pipeline using LangChain + Elasticsearch during Nokia internship. Advanced NLP system for intelligent document retrieval and generation.</p>
+            <div style="margin-top: 1rem;">
+              <span style="background: rgba(255,255,255,0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem;">LangChain</span>
+              <span style="background: rgba(255,255,255,0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem;">Elasticsearch</span>
+            </div>
+          </div>
+
+          <div class="project-card" onclick="showProjectDetails('image-seg')">
+            <h3><i class="fas fa-leaf"></i> Image Classification & Segmentation</h3>
+            <p>CNNs + DeepLabV3 with ResNet50 for healthy/unhealthy leaf detection. Computer vision solution for agricultural applications.</p>
+            <div style="margin-top: 1rem;">
+              <span style="background: rgba(255,255,255,0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem;">CNN</span>
+              <span style="background: rgba(255,255,255,0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem;">DeepLabV3</span>
+            </div>
+          </div>
+
+          <div class="project-card" onclick="showProjectDetails('transliteration')">
+            <h3><i class="fas fa-language"></i> Seq2Seq Transliteration</h3>
+            <p>Hindi→English name transliteration using attention-based RNNs. Deep learning approach for cross-language text processing.</p>
+            <div style="margin-top: 1rem;">
+              <span style="background: rgba(255,255,255,0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem;">RNN</span>
+              <span style="background: rgba(255,255,255,0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem;">Attention</span>
+            </div>
+          </div>
+
+          <div class="project-card" onclick="showProjectDetails('pagerank')">
+            <h3><i class="fas fa-sitemap"></i> PageRank Implementation</h3>
+            <p>Implemented PageRank algorithm using power iteration method. Graph-based ranking system for web page importance.</p>
+            <div style="margin-top: 1rem;">
+              <span style="background: rgba(255,255,255,0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem;">Graph Theory</span>
+              <span style="background: rgba(255,255,255,0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem;">Linear Algebra</span>
+            </div>
+          </div>
+
+          <div class="project-card" onclick="showProjectDetails('clustering')">
+            <h3><i class="fas fa-cluster"></i> K-Means & GMM Clustering</h3>
+            <p>Applied clustering algorithms on MNIST dataset for unsupervised classification. Machine learning approach for pattern recognition.</p>
+            <div style="margin-top: 1rem;">
+              <span style="background: rgba(255,255,255,0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem;">K-Means</span>
+              <span style="background: rgba(255,255,255,0.2); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem;">GMM</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Project Details Modal -->
+  <div id="project-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="project-details"></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>
+        <i class="fas fa-envelope"></i> <a href="mailto:ayushpushp@iisc.ac.in">ayushpushp@iisc.ac.in</a> | 
+        <i class="fas fa-phone"></i> 9509771401
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -2,32 +2,82 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ayush Kumar Pushp | Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Ayush Kumar Pushp</h1>
-    <p>M.Tech in Computational and Data Science, IISc Bengaluru</p>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="visualizations.html">Visualizations</a>
-    </nav>
+  <header id="header">
+    <div class="container">
+      <h1 id="name-title">Ayush Kumar Pushp</h1>
+      <p>M.Tech in Computational and Data Science, IISc Bengaluru</p>
+      <nav>
+        <a href="index.html" class="active"><i class="fas fa-home"></i> Home</a>
+        <a href="projects.html"><i class="fas fa-project-diagram"></i> Projects</a>
+        <a href="visualizations.html"><i class="fas fa-chart-bar"></i> Visualizations</a>
+      </nav>
+    </div>
   </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>Hi! I'm Ayush, currently pursuing M.Tech in Computational and Data Science at IISc Bengaluru. 
-    I specialize in machine learning, NLP, and data visualization. I’m passionate about solving real-world 
-    problems through data-driven methods.</p>
+  <main>
+    <div class="container">
+      <section class="card">
+        <h2><i class="fas fa-user"></i> About Me</h2>
+        <p>Hi! I'm Ayush, currently pursuing M.Tech in Computational and Data Science at IISc Bengaluru. 
+        I specialize in machine learning, NLP, and data visualization. I'm passionate about solving real-world 
+        problems through data-driven methods.</p>
+        
+        <div style="margin-top: 2rem;">
+          <span class="btn" onclick="showSkills()"><i class="fas fa-code"></i> View Skills</span>
+          <a href="mailto:ayushpushp@iisc.ac.in" class="btn"><i class="fas fa-envelope"></i> Contact Me</a>
+        </div>
+      </section>
 
-    <h2>Resume</h2>
-    <iframe src="resume.pdf" width="100%" height="600px"></iframe>
-  </section>
+      <section class="card">
+        <h2><i class="fas fa-file-pdf"></i> Resume</h2>
+        <div style="text-align: center; margin-bottom: 2rem;">
+          <button class="btn" onclick="toggleResume()">
+            <i class="fas fa-eye"></i> <span id="resume-btn-text">View Resume</span>
+          </button>
+        </div>
+        <div id="resume-container" style="display: none;">
+          <iframe src="resume.pdf" width="100%" height="600px" style="border-radius: 10px;"></iframe>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Skills Modal -->
+  <div id="skills-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2><i class="fas fa-cogs"></i> Technical Skills</h2>
+      <div style="margin-top: 2rem;">
+        <h3>Programming Languages</h3>
+        <p>Python, R, SQL, JavaScript, Java</p>
+        
+        <h3>Machine Learning</h3>
+        <p>TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy</p>
+        
+        <h3>Data Visualization</h3>
+        <p>Matplotlib, Seaborn, Plotly, D3.js</p>
+        
+        <h3>Tools & Technologies</h3>
+        <p>Git, Docker, AWS, Elasticsearch, LangChain</p>
+      </div>
+    </div>
+  </div>
 
   <footer>
-    <p>Contact: <a href="mailto:ayushpushp@iisc.ac.in">ayushpushp@iisc.ac.in</a> | 📞 9509771401</p>
+    <div class="container">
+      <p>
+        <i class="fas fa-envelope"></i> <a href="mailto:ayushpushp@iisc.ac.in">ayushpushp@iisc.ac.in</a> | 
+        <i class="fas fa-phone"></i> 9509771401
+      </p>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
