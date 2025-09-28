@@ -23,7 +23,7 @@
     <div class="container">
       <section class="card">
         <h2 style="text-align: center;"><i class="fas fa-chart-line"></i> Data Science Projects & Visualizations</h2>
-        <p style="text-align: center; margin-bottom: 3rem;">Explore various data visualizations and analysis projects using Python and statistical methods</p>
+        <p style="text-align: center; margin-bottom: 3rem;">Explore data visualizations from real-world datasets and analysis projects using Python</p>
         
         <!-- Maharashtra Voter Analysis Section -->
         <div class="card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; margin-bottom: 3rem;">
@@ -39,20 +39,13 @@
           </div>
         </div>
 
-        <!-- Existing Visualization Gallery -->
-        <div style="text-align: center; margin-bottom: 2rem;">
-          <button class="btn" onclick="generateNewPlots()">
-            <i class="fas fa-sync-alt"></i> <span id="generate-btn-text">Generate New Plots</span>
-          </button>
-        </div>
-
         <div class="viz-gallery">
-          <!-- Voter Analysis Plots -->
+          <!-- Voter Analysis Plots Only -->
           <div class="viz-item">
             <img src="plots/scatter_plot.png" alt="Gender Ratio Scatter Plot" onclick="openImageModal(this)">
             <div class="viz-caption">
               <h3>Gender Ratio Analysis</h3>
-              <p>District-wise gender ratio vs registration volume scatter plot</p>
+              <p>District-wise gender ratio vs registration volume scatter plot showing demographic patterns across Maharashtra</p>
             </div>
           </div>
 
@@ -60,7 +53,7 @@
             <img src="plots/box_plot.png" alt="Division Distribution Box Plot" onclick="openImageModal(this)">
             <div class="viz-caption">
               <h3>Distribution Analysis</h3>
-              <p>Box plots showing registration patterns across divisions</p>
+              <p>Box plots showing registration and gender ratio distributions across administrative divisions</p>
             </div>
           </div>
 
@@ -68,24 +61,26 @@
             <img src="plots/bar_plot.png" alt="Top Districts Bar Plot" onclick="openImageModal(this)">
             <div class="viz-caption">
               <h3>District Rankings</h3>
-              <p>Top districts by registration volume and comparative analysis</p>
+              <p>Top districts by registration volume and comparative male vs female voter analysis</p>
             </div>
           </div>
+        </div>
 
-          <!-- Original Demo Plots -->
-          <div class="viz-item">
-            <img src="plots/plot1.png" alt="Sine Wave Visualization" onclick="openImageModal(this)">
-            <div class="viz-caption">
-              <h3>Mathematical Functions</h3>
-              <p>Harmonic wave function visualization</p>
+        <!-- Additional Analysis Section -->
+        <div style="text-align: center; margin: 3rem 0;">
+          <h3><i class="fas fa-lightbulb"></i> Key Insights</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+            <div class="card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.5rem;">
+              <h4>35M+ Voters</h4>
+              <p>Total active registrations analyzed across Maharashtra</p>
             </div>
-          </div>
-
-          <div class="viz-item">
-            <img src="plots/plot2.png" alt="Statistical Analysis" onclick="openImageModal(this)">
-            <div class="viz-caption">
-              <h3>Statistical Analysis</h3>
-              <p>Correlation and distribution analysis</p>
+            <div class="card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 1.5rem;">
+              <h4>1,350 Ratio</h4>
+              <p>Average females per 1000 males across all districts</p>
+            </div>
+            <div class="card" style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%); color: white; padding: 1.5rem;">
+              <h4>62.7% Female</h4>
+              <p>Overall female voter participation percentage</p>
             </div>
           </div>
         </div>
